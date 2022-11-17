@@ -10,3 +10,4 @@ while choice1!="3":
 
     if choice1 == '2':
         grille_jeu_losange()
+        break
