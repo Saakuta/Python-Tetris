@@ -16,19 +16,26 @@ def menu_1():
 
 
 def grille_jeu_losange():
-    with open("Losange.txt", "r") as f:
-        for l in f:
-            for j in l:
-                if j == '0':
-                    print(" ", end="")
-                else:
-                    print(".", end="")
-            print("\n")
+    with open("losange.txt", "r") as f:
+        for i in range(0, 19):
+            I = f.readline()
+            L = list(I[:len(I) - 1])
+            for i in range(0, len(L)):
+                if (L[i] == chr(48)):
+                    L[i] = " "
+                if (L[i] == chr(49)):
+                    L[i] = chr(35)
+            ligne = ""
+            for i in range(len(L)):
+                ligne += L[i]
+            print(ligne)
 
 def menu_logo():
     print("________________________________________________________________________")
     print("|                                                                      |")
-    print("|                               Menu                                   |")
+    print("|                              ~Menu~                                  |")
     print("|                                                                      |")
     print("________________________________________________________________________")
+
+
 
