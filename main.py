@@ -9,13 +9,15 @@ while choice1!="3":
     if choice1 =="1":
         choice1_1 = 0
         while choice1_1 != "3":
+            print("________________________________________________________________________")
             choice1_1 = menu_2()
 
             #if choice1_1 == "1":
 
             if choice1_1 == "2":
+                print("________________________________________________________________________")
                 grille_jeu_losange()
-                break
+
 
     if choice1 == '2':
         afficher_regles()

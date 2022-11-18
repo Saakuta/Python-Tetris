@@ -36,7 +36,7 @@ def menu_2():
 
 def grille_jeu_losange():
     with open("losange.txt", "r") as f:
-        print("  ",end="")
+        print("    ",end="")
         for m in range (0, 19):
             print(chr(97+m), end=" ")
             m += 1
@@ -65,6 +65,8 @@ def menu_logo():
     print("|                                                                      |")
     print("________________________________________________________________________")
 
+def espacement():
+    print("________________________________________________________________________")
 def afficher_regles():
     print("- ")
 
