@@ -3,9 +3,9 @@ def menu_1():
 
     choice1 = 0
     while choice1 != "3":
-        print("Entrez 1: Jouer dans un cercle (19x19)")
-        print("Entrez 2: Jouer dans un losange (19x19)")
-        print("Entrer 3: Jouer dans un triangle (19x9)")
+        print("Entrez 1 pour commencer à jouer.")
+        print("Entrez 2 afficher les règles.")
+        print("Entrez 3 pour quitter le jeu.")
         print()
         choice1 = str(input("Entrez votre réponse: "))
         print()
@@ -14,6 +14,23 @@ def menu_1():
         if choice1 != "3":
             return choice1
     return choice1
+
+def menu_2():
+    print()
+
+    choice1_1 = 0
+    while choice1_1 != "3":
+        print("Entrez 1: Jouer dans un cercle (19x19)")
+        print("Entrez 2: Jouer dans un losange (19x19)")
+        print("Entrer 3: Jouer dans un triangle (19x9)")
+        print()
+        choice1_1 = str(input("Entrez votre réponse: "))
+        print()
+        while choice1_1 < "1" or choice1_1 > "3":
+            choice1_1 = str(input("Réponse incorrect. Ressaisissez votre réponse svp : "))
+        if choice1_1 != "3":
+            return choice1_1
+    return choice1_1
 
 
 
@@ -48,6 +65,7 @@ def menu_logo():
     print("|                                                                      |")
     print("________________________________________________________________________")
 
-
+def afficher_regles():
+    print("- ")
 
 
