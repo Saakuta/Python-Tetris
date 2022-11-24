@@ -15,6 +15,7 @@ def menu_1():
             return choice1
     return choice1
 
+
 def menu_2():
     print()
 
@@ -52,8 +53,8 @@ def menu_3():
 
 def grille_jeu_losange_dimension(n):
     with open("losange.txt", "r"):
-        print("    ",end="")
-        for m in range (0, 19):
+        print("    ", end="")
+        for m in range(0, 19):
             print(chr(97+m), end=" ")
             m += 1
         print()
@@ -61,7 +62,7 @@ def grille_jeu_losange_dimension(n):
 
     espace1 = n * 2 - 2
     for i in range(0, n-1):
-        if i % 2 == 0 :
+        if i % 2 == 0:
             print(espace1 * " " + i * "# " + "#")
         espace1 -= 1
         i += 1
@@ -69,35 +70,33 @@ def grille_jeu_losange_dimension(n):
     espace2 = n * 2 - 10
     x = n
     for i in range(1, n + 1):
-        if i % 2 == 1 :
+        if i % 2 == 1:
             print(espace2 * " " + "#" + (x - 1) * " #")
         espace2 += 1
         x -= 1
 
+
 def grille_jeu_losange_fichier():
-    with open("losange.txt", "r")as f :
-        print("    ",end="")
-        for m in range (0, 19):
+    with open("losange.txt", "r")as f:
+        print("    ", end="")
+        for m in range(0, 19):
             print(chr(97+m), end=" ")
             m += 1
         print()
         print("=================")
     for i in range(0, 19):
-        I = f.readline()
-        L = list(I[:len(I) - 1])
-        for i in range(0, len(L)):
+        p = f.readline()
+        x = list(p[:len(p) - 1])
+        for g in range(0, len(x)):
 
-            if (L[i] == chr(48)):
-                L[i] = " "
-            if (L[i] == chr(49)):
-                L[i] = chr(35)
+            if x[g] == chr(48):
+                x[g] = " "
+            if x[g] == chr(49):
+                x[g] = chr(35)
         ligne = ""
-        for i in range(len(L)):
-            ligne += L[i]
+        for n in range(len(x)):
+            ligne += x[n]
         print(ligne)
-
-
-
 
 
 def menu_logo():
@@ -114,5 +113,3 @@ def espacement():
 
 def afficher_regles():
     print("- ")
-
-
