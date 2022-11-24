@@ -20,9 +20,9 @@ def menu_2():
 
     choice1_2 = 0
     while choice1_2 != "3":
-        print("Entrez 1: Jouer dans un cercle (19x19)")
-        print("Entrez 2: Jouer dans un losange (19x19)")
-        print("Entrer 3: Jouer dans un triangle (19x9)")
+        print("Entrez 1: Jouer dans un cercle")
+        print("Entrez 2: Jouer dans un losange")
+        print("Entrer 3: Jouer dans un triangle")
         print()
         choice1_2 = str(input("Entrez votre réponse: "))
         print()
