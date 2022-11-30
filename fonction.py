@@ -84,19 +84,19 @@ def grille_jeu_losange_fichier():
             m += 1
         print()
         print("=================")
-    for i in range(0, 19):
-        p = f.readline()
-        x = list(p[:len(p) - 1])
-        for g in range(0, len(x)):
+        for i in range(0, 19):
+            p = f.readline()
+            x = list(p[:len(p) - 1])
+            for g in range(0, len(x)):
 
-            if x[g] == chr(48):
-                x[g] = " "
-            if x[g] == chr(49):
-                x[g] = chr(35)
-        ligne = ""
-        for n in range(len(x)):
-            ligne += x[n]
-        print(ligne)
+                if x[g] == chr(48):
+                    x[g] = " "
+                if x[g] == chr(49):
+                    x[g] = chr(35)
+            ligne = ""
+            for n in range(len(x)):
+                ligne += x[n]
+            print(ligne)
 
 
 def menu_logo():
