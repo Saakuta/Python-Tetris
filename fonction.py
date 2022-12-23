@@ -112,7 +112,12 @@ def espacement():
 
 
 def afficher_regles():
-    print("- ")
+    espacement()
+    with open("regles.txt", "r") as f:
+        contenu = f.readlines()
+    for ligne in contenu:
+        print(ligne)
+    espacement()
 
 def matrice_jeu(nmb):
     nmb = int(input("Entrez un nombre de ligne entre 19 et 26: "))
