@@ -71,7 +71,7 @@ def afficher_regles():
         print(ligne)
     espacement()
 
-def matrice_jeu(nmb):
+def matrice_jeu_dimension(nmb):
     n = int(input("Entrer une dimension : "))
     while n <= 0:
         n = int(input("Entrer une dimension : "))
@@ -122,6 +122,7 @@ def matrice_jeu(nmb):
             print(M[a][b], end=" ")
         print()
 
+
 def grid(fichier):
     with open (fichier, "r") as f:
         contenu = f.readlines()
@@ -130,8 +131,20 @@ def grid(fichier):
 
         return contenu
 
-def afficher(fichier):
+def print_grind(fichier):
+    print("    ", end=" ")
+    for m in range(19):
+        print(chr(97 + m), end=" ")
+    print()
+    print("   ╔", end=" ")
+    for i in range(19):
+        print("═", end=" ")
+    print("╗", end="\n")
+
+    n = 0
     for ligne in fichier:
+        print(chr(65 + n)," ║", end=" ")
+        n += 1
         for elem in ligne:
             if elem == 0:
                 print(" ", end=" ")
@@ -139,4 +152,10 @@ def afficher(fichier):
                 print("•", end=" ")
             elif elem == 2:
                 print("■", end=" ")
+        print("║", end=" ")
         print()
+
+    print("   ╚", end=" ")
+    for i in range(19):
+        print("═", end=" ")
+    print("╝", end="\n")

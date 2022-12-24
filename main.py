@@ -21,7 +21,7 @@ while choice1 != "3":
                     if choice1_2_3 == "1":
                         espacement()
                         map = grid('cercle.txt')
-                        afficher(map)
+                        print_grind(map)
 
                     if choice1_2_3 == "2":
                         espacement()
@@ -36,7 +36,7 @@ while choice1 != "3":
                     if choice1_2_3 == "1":
                         espacement()
                         map = grid('losange.txt')
-                        afficher(map)
+                        print_grind(map)
 
                     if choice1_2_3 == "2":
                         espacement()
@@ -54,7 +54,7 @@ while choice1 != "3":
                     if choice1_2_3 == "1":
                         espacement()
                         map = grid('triangle.txt')
-                        afficher(map)
+                        print_grind(map)
 
                     if choice1_2_3 == "2":
                         espacement()
