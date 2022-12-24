@@ -51,54 +51,6 @@ def menu_3():
     return choice1_2_3
 
 
-def grille_jeu_losange_dimension(n):
-    with open("losange.txt", "r"):
-        print("    ", end="")
-        for m in range(0, 19):
-            print(chr(97+m), end=" ")
-            m += 1
-        print()
-        print("=================")
-
-    espace1 = n * 2 - 2
-    for i in range(0, n-1):
-        if i % 2 == 0:
-            print(espace1 * " " + i * "# " + "#")
-        espace1 -= 1
-        i += 1
-
-    espace2 = n * 2 - 10
-    x = n
-    for i in range(1, n + 1):
-        if i % 2 == 1:
-            print(espace2 * " " + "#" + (x - 1) * " #")
-        espace2 += 1
-        x -= 1
-
-
-def grille_jeu_losange_fichier():
-    with open("losange.txt", "r")as f:
-        print("    ", end="")
-        for m in range(0, 19):
-            print(chr(97+m), end=" ")
-            m += 1
-        print()
-        print("=================")
-        for i in range(0, 19):
-            p = f.readline()
-            x = list(p[:len(p) - 1])
-            for g in range(0, len(x)):
-
-                if x[g] == chr(48):
-                    x[g] = " "
-                if x[g] == chr(49):
-                    x[g] = chr(35)
-            ligne = ""
-            for n in range(len(x)):
-                ligne += x[n]
-            print(ligne)
-
-
 def menu_logo():
     print("________________________________________________________________________")
     print("|                                                                      |")
@@ -120,9 +72,10 @@ def afficher_regles():
     espacement()
 
 def matrice_jeu(nmb):
-    nmb = int(input("Entrez un nombre de ligne entre 19 et 26: "))
-    while (nmb >= 27 or nmb <= 18):
-        nmb = int(input("Entrez un nombre de ligne entre 19 et 26: "))
+    n = int(input("Entrer une dimension : "))
+    while n <= 0:
+        n = int(input("Entrer une dimension : "))
+
     nmb += 2
     M = []
     m = 0
@@ -163,8 +116,22 @@ def matrice_jeu(nmb):
     L.append("╝")
     M.append(L)
 
+
     for a in range(nmb + 1):
         for b in range(nmb + 1):
             print(M[a][b], end=" ")
         print()
 
+def plateau(fichier):
+    with open (fichier, "r") as f:
+        contenu = f.readlines()
+        contenu = [ligne.strip().split(" ") for ligne in contenu]
+        contenu = [[int(x) for x in ligne] for ligne in contenu]
+
+        return contenu
+
+def afficher(fichier):
+    for ligne in fichier:
+        for elem in ligne:
+            print(elem, end=" ")
+        print()
