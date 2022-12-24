@@ -20,7 +20,7 @@ while choice1 != "3":
 
                     if choice1_2_3 == "1":
                         espacement()
-                        map = plateau('cercle.txt')
+                        map = grid('cercle.txt')
                         afficher(map)
 
                     if choice1_2_3 == "2":
@@ -35,7 +35,7 @@ while choice1 != "3":
 
                     if choice1_2_3 == "1":
                         espacement()
-                        map = plateau('losange.txt')
+                        map = grid('losange.txt')
                         afficher(map)
 
                     if choice1_2_3 == "2":
@@ -53,7 +53,7 @@ while choice1 != "3":
 
                     if choice1_2_3 == "1":
                         espacement()
-                        map = plateau('triangle.txt')
+                        map = grid('triangle.txt')
                         afficher(map)
 
                     if choice1_2_3 == "2":

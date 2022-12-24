@@ -122,7 +122,7 @@ def matrice_jeu(nmb):
             print(M[a][b], end=" ")
         print()
 
-def plateau(fichier):
+def grid(fichier):
     with open (fichier, "r") as f:
         contenu = f.readlines()
         contenu = [ligne.strip().split(" ") for ligne in contenu]
@@ -133,5 +133,10 @@ def plateau(fichier):
 def afficher(fichier):
     for ligne in fichier:
         for elem in ligne:
-            print(elem, end=" ")
+            if elem == 0:
+                print(" ", end=" ")
+            elif elem == 1:
+                print("•", end=" ")
+            elif elem == 2:
+                print("■", end=" ")
         print()
