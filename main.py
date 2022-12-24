@@ -25,10 +25,10 @@ while choice1 != "3":
 
                     if choice1_2_3 == "2":
                         espacement()
-                        n = int(input("Entrer une dimension : "))
-                        while n <= 0:
-                            n = int(input("Entrer une dimension : "))
-                        contenu = matrice_jeu_cercle(n)
+                        nmb = int(input("Saisir un nombre de colonne : "))
+                        while nmb < 21 or nmb > 26:
+                            nmb = int(input("Saisir un nombre de colonne : "))
+                        matrice_jeu_cercle(nmb)
 
 
             if choice1_2 == "2":

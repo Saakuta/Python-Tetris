@@ -71,16 +71,69 @@ def afficher_regles():
         print(ligne)
     espacement()
 
-def matrice_jeu_cercle(taille):
-    matrix = [[0 for _ in range(taille)] for _ in range(taille)]
-    centre = taille // 2
+def matrice_jeu_cercle(nmb):
+    grille = []
+    n = 65
+    y = 97
+    L = ['   ']
+    for i in range(nmb):
+        L.append(chr(y))
+        y += 1
+    grille.append(L)
+    L = [' ']
+    L.append("╔")
+    for i in range(nmb):
+        L.append("═")
+    L.append("╗")
+    grille.append(L)
+    for i in range(3):
+        L = []
+        L.append(chr(n))
+        n += 1
+        L.append("║")
+        for j in range(nmb):
+            if (j < 3 - i) or (nmb - 4 + i < j < nmb):
+                L.append(0)
+            else:
+                L.append(1)
+        L.append("║")
+        grille.append(L)
+    for i in range(nmb - 6):
+        L = []
+        L.append(chr(n))
+        n += 1
+        L.append("║")
+        for j in range(nmb):
+            L.append(1)
+        L.append("║")
+        grille.append(L)
+    for i in range(3):
+        L = []
+        L.append(chr(n))
+        n += 1
+        L.append("║")
+        for j in range(nmb):
+            if (j == 0 or j - i < 1) or (nmb - 2 - i < j <= nmb):
+                L.append(0)
+            else:
+                L.append(1)
+        L.append("║")
+        grille.append(L)
+    L = [' ']
+    L.append("╚")
+    for i in range(nmb):
+        L.append("═")
+    L.append("╝")
+    grille.append(L)
 
-    for i in range(taille):
-        for j in range(taille):
-            if (i - centre) ** 2 + (j - centre) ** 2 <= (taille // 2) ** 2:
-                matrix[i][j] = 1
-
-    return matrix
+    for i in range(len(grille)):
+        for j in range(len(grille[i])):
+            if grille[i][j] == 0:
+                grille[i][j] = ' '
+            if grille[i][j] == 1:
+                grille[i][j] = '*'
+            print(grille[i][j], end=' ')
+        print()
 
 
 
