@@ -71,58 +71,114 @@ def afficher_regles():
         print(ligne)
     espacement()
 
-def matrice_jeu_dimension(nmb):
-    n = int(input("Entrer une dimension : "))
-    while n <= 0:
-        n = int(input("Entrer une dimension : "))
+def matrice_jeu_cercle(taille):
+    matrix = [[0 for _ in range(taille)] for _ in range(taille)]
+    centre = taille // 2
 
-    nmb += 2
-    M = []
-    m = 0
-    L = []
-    L.append(" ")
-    L.append(" ")
-    for j in range(nmb - 2):
-        if m < 26:
-            L.append(chr(97 + m))
-        m += 1
-    L.append(" ")
-    M.append(L)
-    L = []
-    L.append(" ")
+    for i in range(taille):
+        for j in range(taille):
+            if (i - centre) ** 2 + (j - centre) ** 2 <= (taille // 2) ** 2:
+                matrix[i][j] = 1
+
+    return matrix
+
+
+
+
+
+def matrice_jeu_losange(nmb):
+    grille = []
+    nbLig = nmb // 2
+    n = 65
+    y = 97
+    L = ['   ']
+    for i in range(nmb):
+        L.append(chr(y))
+        y += 1
+    grille.append(L)
+    L = [' ']
+
     L.append("╔")
-    for k in range(nmb - 2):
+    for i in range(nmb):
         L.append("═")
     L.append("╗")
-    M.append(L)
-    n = 0
-    for l in range(2, nmb):
+    grille.append(L)
+    for i in range(nbLig + 1):
         L = []
-        if n < 26:
-            L.append(chr(65 + n))
-        else:
-            L.append(n)
+        L.append(chr(n))
         n += 1
         L.append("║")
-        for m in range(nmb - 2):
-            L.append("0")
+        for j in range(nmb):
+            if j == nmb // 2 or (nmb // 2 + i >= j >= nmb // 2 - i):
+                L.append(1)
+            else:
+                L.append(0)
         L.append("║")
-        M.append(L)
-    L = []
-    L.append(" ")
+        grille.append(L)
+    for i in range(nbLig):
+        L = []
+        L.append(chr(n))
+        n += 1
+        L.append("║")
+        for j in range(nmb):
+            if (j == 0 or j - i < 1) or (nmb - 2 - i < j <= nmb):
+                L.append(0)
+            else:
+                L.append(1)
+        L.append("║")
+        grille.append(L)
+    L = [' ']
     L.append("╚")
-    for h in range(1, nmb - 1):
+    for i in range(nmb):
         L.append("═")
     L.append("╝")
-    M.append(L)
-
-
-    for a in range(nmb + 1):
-        for b in range(nmb + 1):
-            print(M[a][b], end=" ")
+    grille.append(L)
+    for i in range(len(grille)):
+        for j in range(len(grille[i])):
+            if grille[i][j] == 0:
+                grille[i][j] = ' '
+            if grille[i][j] == 1:
+                grille[i][j] = "•"
+            print(grille[i][j], end=' ')
         print()
-
-
+def matrice_jeu_triangle(nmb):
+    grille = []
+    nbLig = nmb // 2
+    n = 65
+    y = 97
+    L = ['   ']
+    for i in range(nmb):
+        L.append(chr(y))
+        y += 1
+    grille.append(L)
+    L = [' ']
+    L.append("╔")
+    for i in range(nmb):
+        L.append("═")
+    L.append("╗")
+    grille.append(L)
+    for i in range(nbLig):
+        L = []
+        L.append(chr(n))
+        n += 1
+        L.append("║")
+        for j in range(nmb):
+            if j == ((nmb) // 2) or (j <= (nmb) // 2 + i) and (j >= (nmb) // 2 - i) and j:
+                L.append('*')
+            else:
+                L.append(' ')
+        L.append("║")
+        grille.append(L)
+    L = [' ']
+    L.append("╚")
+    for i in range(nmb):
+        L.append("═")
+    L.append("╝")
+    grille.append(L)
+    for i in range(len(grille)):
+        for j in range(len(grille[i])):
+            print(grille[i][j], end=' ')
+        print()
 def grid(fichier):
     with open (fichier, "r") as f:
         contenu = f.readlines()

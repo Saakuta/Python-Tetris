@@ -28,7 +28,8 @@ while choice1 != "3":
                         n = int(input("Entrer une dimension : "))
                         while n <= 0:
                             n = int(input("Entrer une dimension : "))
-                        matrice_jeu_dimension(n)
+                        contenu = matrice_jeu_cercle(n)
+
 
             if choice1_2 == "2":
                 choice1_2_3 = 0
@@ -43,10 +44,10 @@ while choice1 != "3":
 
                     if choice1_2_3 == "2":
                         espacement()
-                        n = int(input("Entrer une dimension : "))
-                        while n <= 0:
-                            n = int(input("Entrer une dimension : "))
-                        matrice_jeu_dimension(n)
+                        nmb = int(input("Saisir un nombre de colonne : "))
+                        while nmb < 21 or nmb > 26 or nmb % 2 == 0:
+                            nmb = int(input("Saisir un nombre de colonne : "))
+                        matrice_jeu_losange(nmb)
 
             if choice1_2 == "3":
                 choice1_2_3 = 0
@@ -61,10 +62,11 @@ while choice1 != "3":
 
                     if choice1_2_3 == "2":
                         espacement()
-                        n = int(input("Entrer une dimension : "))
-                        while n <= 0:
-                            n = int(input("Entrer une dimension : "))
-                        matrice_jeu_dimension(n)
+                        nmb = int(input("Saisir un nombre de colonne : "))
+                        while nmb < 21 or nmb > 26 or nmb % 2 == 0:
+                            nmb = int(input("Saisir un nombre de colonne : "))
+                        matrice_jeu_triangle(nmb)
+
             break
     if choice1 == '2':
         afficher_regles()
