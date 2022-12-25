@@ -15,3 +15,7 @@ Fichier fonction.py:
 
     Le fichier 'fonctions' contient :
     - les fonctions utilisées dans le programme entier
+
+Fichiers .txt
+
+    Les fichiers ".txt" contiennent les plateaux de jeu pour chacune des formes : cercle, losange et triangle.

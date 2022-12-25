@@ -1,3 +1,7 @@
+from BlocsCercle import *
+from BlocsLosange import *
+from BlocsTriangle import *
+from BlocsCommuns import *
 def menu_1():
     print()
 
@@ -261,3 +265,6 @@ def print_grind(fichier):
     for i in range(19):
         print("═", end=" ")
     print("╝", end="\n")
+
+def print_blocs():
+    print(" Work in progress ...")
