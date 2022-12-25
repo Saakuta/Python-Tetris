@@ -266,5 +266,23 @@ def print_grind(fichier):
         print("═", end=" ")
     print("╝", end="\n")
 
-def print_blocs():
-    print(" Work in progress ...")
+def choix_print_block():
+    print()
+
+    choice1_2_3_4 = 0
+    while choice1_2_3_4 != "2":
+        print("Entrez 1: Afficher tous les blocs")
+        print("Entrez 2: Afficher les blocs 3 par 3")
+        print()
+        choice1_2_3_4 = str(input("Entrez votre réponse: "))
+        print()
+        while choice1_2_3_4 < "1" or choice1_2_3_4 > "2":
+            choice1_2_3_4 = str(input("Réponse incorrect. Ressaisissez votre réponse svp : "))
+        if choice1_2_3_4 != "2":
+            return choice1_2_3_4
+    return choice1_2_3_4
+def print_blocs(fichier):
+    with open(fichier, "r") as f:
+        contenu = f.readlines()
+
+        print(contenu)
