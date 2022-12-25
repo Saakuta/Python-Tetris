@@ -1,8 +1,4 @@
-from BlocsCercle import *
-from BlocsLosange import *
-from BlocsTriangle import *
-from BlocsCommuns import *
-def menu_1():
+def menu_1(): ### Menu principal
     print()
 
     choice1 = 0
@@ -19,7 +15,7 @@ def menu_1():
             return choice1
     return choice1
 
-def menu_2():
+def menu_2(): ### Menu des formes
     print()
 
     choice1_2 = 0
@@ -36,7 +32,7 @@ def menu_2():
             return choice1_2
     return choice1_2
 
-def menu_3():
+def menu_3(): ### Menu choix options
     print()
 
     choice1_2_3 = 0
@@ -62,7 +58,7 @@ def menu_logo():
 def espacement():
     print("________________________________________________________________________")
 
-def afficher_regles():
+def afficher_regles(): ### Affichage des règles
     espacement()
     with open("regles.txt", "r") as f:
         contenu = f.readlines()

@@ -1,4 +1,8 @@
 from fonction import *
+from BlocsCercle import *
+from BlocsLosange import *
+from BlocsTriangle import *
+from BlocsCommuns import *
 import time
 
 menu_logo()
