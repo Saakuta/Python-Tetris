@@ -237,7 +237,7 @@ def grid(fichier):
 
         return contenu
 
-def print_grind(fichier):
+def print_grid(fichier):
     print("    ", end=" ")
     for m in range(19):
         print(chr(97 + m), end=" ")
@@ -281,8 +281,14 @@ def choix_print_block():
         if choice1_2_3_4 != "2":
             return choice1_2_3_4
     return choice1_2_3_4
-def print_blocs(fichier):
-    with open(fichier, "r") as f:
-        contenu = f.readlines()
+def print_blocs(liste):
 
-        print(contenu)
+    for ligne in liste:
+        for elem in ligne:
+            for char in elem:
+                if char == 0:
+                    print(" ", end=" ")
+                else:
+                    print("■", end=" ")
+            print()
+        print()

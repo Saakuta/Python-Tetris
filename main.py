@@ -21,17 +21,20 @@ while choice1 != "3":
                     if choice1_2_3 == "1":
                         espacement()
                         map = grid('cercle.txt')
-                        print_grind(map)
+                        print_grid(map)
+
+
+
                         choice1_2_3_4 = 0
                         while choice1_2_3_4 != "2":
                             espacement()
-                        choice1_2_3_4 = choix_print_block()
+                            choice1_2_3_4 = choix_print_block()
 
                             if choice1_2_3_4 =="1":
-                                print_blocs()
+                                print_blocs(C)
 
                             if choice1_2_3_4 =="2":
-                                print_blocs()
+                                print_blocs(C)
 
 
 
@@ -44,13 +47,13 @@ while choice1 != "3":
                         choice1_2_3_4 = 0
                         while choice1_2_3_4 != "2":
                             espacement()
-                        choice1_2_3_4 = choix_print_block()
+                            choice1_2_3_4 = choix_print_block()
 
-                        if choice1_2_3_4 == "1":
-                            print_blocs()
+                            if choice1_2_3_4 == "1":
+                                print_blocs(C)
 
-                        if choice1_2_3_4 == "2":
-                            print_blocs()
+                            if choice1_2_3_4 == "2":
+                                print_blocs(C)
 
 
             if choice1_2 == "2":
@@ -63,17 +66,17 @@ while choice1 != "3":
                     if choice1_2_3 == "1":
                         espacement()
                         map = grid('losange.txt')
-                        print_grind(map)
+                        print_grid(map)
                         choice1_2_3_4 = 0
                         while choice1_2_3_4 != "2":
                             espacement()
-                        choice1_2_3_4 = choix_print_block()
+                            choice1_2_3_4 = choix_print_block()
 
-                        if choice1_2_3_4 == "1":
-                            print_blocs()
+                            if choice1_2_3_4 == "1":
+                                print_blocs(L)
 
-                        if choice1_2_3_4 == "2":
-                            print_blocs()
+                            if choice1_2_3_4 == "2":
+                                print_blocs(L)
 
                     if choice1_2_3 == "2":
                         espacement()
@@ -81,16 +84,17 @@ while choice1 != "3":
                         while nmb < 21 or nmb > 26 or nmb % 2 == 0:
                             nmb = int(input("Saisir un nombre de colonne : "))
                         matrice_jeu_losange(nmb)
+
                         choice1_2_3_4 = 0
                         while choice1_2_3_4 != "2":
                             espacement()
-                        choice1_2_3_4 = choix_print_block()
+                            choice1_2_3_4 = choix_print_block()
 
-                        if choice1_2_3_4 == "1":
-                            print_blocs()
+                            if choice1_2_3_4 == "1":
+                                print_blocs(L)
 
-                        if choice1_2_3_4 == "2":
-                            print_blocs()
+                            if choice1_2_3_4 == "2":
+                                print_blocs(L)
 
             if choice1_2 == "3":
                 choice1_2_3 = 0
@@ -101,17 +105,17 @@ while choice1 != "3":
                     if choice1_2_3 == "1":
                         espacement()
                         map = grid('triangle.txt')
-                        print_grind(map)
+                        print_grid(map)
                         choice1_2_3_4 = 0
                         while choice1_2_3_4 != "2":
                             espacement()
-                        choice1_2_3_4 = choix_print_block()
+                            choice1_2_3_4 = choix_print_block()
 
-                        if choice1_2_3_4 == "1":
-                            print_blocs()
+                            if choice1_2_3_4 == "1":
+                                print_blocs(T)
 
-                        if choice1_2_3_4 == "2":
-                            print_blocs()
+                            if choice1_2_3_4 == "2":
+                                print_blocs(T)
 
                     if choice1_2_3 == "2":
                         espacement()
@@ -122,13 +126,13 @@ while choice1 != "3":
                         choice1_2_3_4 = 0
                         while choice1_2_3_4 != "2":
                             espacement()
-                        choice1_2_3_4 = choix_print_block()
+                            choice1_2_3_4 = choix_print_block()
 
-                        if choice1_2_3_4 == "1":
-                            print_blocs()
+                            if choice1_2_3_4 == "1":
+                                print_blocs(T)
 
-                        if choice1_2_3_4 == "2":
-                            print_blocs()
+                            if choice1_2_3_4 == "2":
+                                print_blocs(T)
 
             break
 
