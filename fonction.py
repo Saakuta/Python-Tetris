@@ -15,7 +15,6 @@ def menu_1():
             return choice1
     return choice1
 
-
 def menu_2():
     print()
 
@@ -33,7 +32,6 @@ def menu_2():
             return choice1_2
     return choice1_2
 
-
 def menu_3():
     print()
 
@@ -50,7 +48,6 @@ def menu_3():
             return choice1_2_3
     return choice1_2_3
 
-
 def menu_logo():
     print("________________________________________________________________________")
     print("|                                                                      |")
@@ -58,10 +55,8 @@ def menu_logo():
     print("|                                                                      |")
     print("________________________________________________________________________")
 
-
 def espacement():
     print("________________________________________________________________________")
-
 
 def afficher_regles():
     espacement()
@@ -135,10 +130,6 @@ def matrice_jeu_cercle(nmb):
             print(grille[i][j], end=' ')
         print()
 
-
-
-
-
 def matrice_jeu_losange(nmb):
     grille = []
     nbLig = nmb // 2
@@ -194,6 +185,7 @@ def matrice_jeu_losange(nmb):
                 grille[i][j] = "•"
             print(grille[i][j], end=' ')
         print()
+
 def matrice_jeu_triangle(nmb):
     grille = []
     nbLig = nmb // 2
@@ -232,6 +224,7 @@ def matrice_jeu_triangle(nmb):
         for j in range(len(grille[i])):
             print(grille[i][j], end=' ')
         print()
+
 def grid(fichier):
     with open (fichier, "r") as f:
         contenu = f.readlines()
