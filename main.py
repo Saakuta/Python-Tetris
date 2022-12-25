@@ -15,7 +15,7 @@ while choice1 != "3":
         while choice1_2 != "3":
             espacement()
             choice1_2 = menu_2()
-
+            ### Cercle
             if choice1_2 == "1":
                 choice1_2_3 = 0
                 while choice1_2_3 != "2":
@@ -59,7 +59,7 @@ while choice1 != "3":
                             if choice1_2_3_4 == "2":
                                 print_blocs(C)
 
-
+            ### Losange
             if choice1_2 == "2":
                 choice1_2_3 = 0
                 while choice1_2_3 != "2":
@@ -100,6 +100,7 @@ while choice1 != "3":
                             if choice1_2_3_4 == "2":
                                 print_blocs(L)
 
+            ### Triangle
             if choice1_2 == "3":
                 choice1_2_3 = 0
                 while choice1_2_3 != "2":

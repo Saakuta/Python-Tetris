@@ -19,3 +19,7 @@ Fichier fonction.py:
 Fichiers .txt
 
     Les fichiers ".txt" contiennent les plateaux de jeu pour chacune des formes : cercle, losange et triangle.
+
+Fichiers Blocs
+
+    Les fichiers Blocs contiennent les listes des blocs propre à chaque plateau ou bien les blocs en commun à tous.
